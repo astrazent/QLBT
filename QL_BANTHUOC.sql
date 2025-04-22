@@ -5,6 +5,17 @@ GO
 USE QL_BANTHUOC;
 GO
 
+-- Xóa các bảng nếu có trước khi thực thi
+DROP TABLE HoaDonBanThuoc;
+DROP TABLE HoaDonNhapThuoc;
+DROP TABLE SoLuongThuocChiNhanh;
+DROP TABLE KhachHang;
+DROP TABLE DuocSi;
+DROP TABLE NhanVienKho;
+DROP TABLE Thuoc;
+DROP TABLE DanhMucThuoc;
+DROP TABLE ChiNhanh;
+
 -- 1. Chi nhánh
 CREATE TABLE ChiNhanh (
     maChiNhanh NVARCHAR(10) PRIMARY KEY,

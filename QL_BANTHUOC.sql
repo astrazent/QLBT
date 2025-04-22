@@ -1,20 +1,17 @@
 -- Tạo Database
-CREATE DATABASE QL_BANTHUOC;
-GO
-
 USE QL_BANTHUOC;
 GO
 
 -- Xóa các bảng nếu có trước khi thực thi
-DROP TABLE HoaDonBanThuoc;
-DROP TABLE HoaDonNhapThuoc;
-DROP TABLE SoLuongThuocChiNhanh;
-DROP TABLE KhachHang;
-DROP TABLE DuocSi;
-DROP TABLE NhanVienKho;
-DROP TABLE Thuoc;
-DROP TABLE DanhMucThuoc;
-DROP TABLE ChiNhanh;
+DROP TABLE IF EXISTS HoaDonBanThuoc;
+DROP TABLE IF EXISTS HoaDonNhapThuoc;
+DROP TABLE IF EXISTS SoLuongThuocChiNhanh;
+DROP TABLE IF EXISTS KhachHang;
+DROP TABLE IF EXISTS DuocSi;
+DROP TABLE IF EXISTS NhanVienKho;
+DROP TABLE IF EXISTS Thuoc;
+DROP TABLE IF EXISTS DanhMucThuoc;
+DROP TABLE IF EXISTS ChiNhanh;
 
 -- 1. Chi nhánh
 CREATE TABLE ChiNhanh (
@@ -122,7 +119,7 @@ INSERT INTO ChiNhanh (maChiNhanh, tenChiNhanh, diaChi) VALUES
 (N'CNQ5', N'Chi nhánh Quận 5', N'Số 15, Đường Trần Hưng Đạo, Phường 5, Quận 5, TP.HCM'),
 (N'CNQ7', N'Chi nhánh Quận 7', N'Số 20, Đường Nguyễn Thị Thập, Phường Tân Phú, Quận 7, TP.HCM'),
 (N'CNQ10', N'Chi nhánh Quận 10', N'Số 25, Đường Sư Vạn Hạnh, Phường 12, Quận 10, TP.HCM'),
-(N'CNQ12', N'Chi nhánh Quận 12', N'Số 30, Đường Lê Văn Khương, Phường Hiệp Thành, Quận 12, TP.HCM'),
+(N'CNQ12', N'Chi nhánh Quận 12', N'Số 30, Đường Lê Văn Khương, Phường Hiệp Thành, Quận 12, TP.HCM');
 GO
 
 -- Thêm dữ liệu nhân viên kho
@@ -246,11 +243,11 @@ INSERT INTO DuocSi (maDuocSi, tenDuocSi, gioiTinh, diaChi, soDienThoai, capBac, 
 
 -- Dữ liệu chi nhánh Quận 12
 INSERT INTO DuocSi (maDuocSi, tenDuocSi, gioiTinh, diaChi, soDienThoai, capBac, maChiNhanh) VALUES
-('Q12DS001', N'Nguyễn Thị Kim Lan', 'Nữ', N'Số 15, Đường Nguyễn Văn Cừ, Quận 12, TP.HCM', '0901234567', 1, N'CNQ12'),
-('Q12DS002', N'Lê Văn Cường', 'Nam', N'Số 20, Đường Lê Văn Lương, Quận 12, TP.HCM', '0912345678', 2, N'CNQ12'),
-('Q12DS003', N'Phan Thiên Hương', 'Nữ', N'Số 30, Đường Trường Chinh, Quận 12, TP.HCM', '0923456789', 4, N'CNQ12'),
-('Q12DS004', N'Vũ Tiến Duy', 'Nam', N'Số 40, Đường Ngô Chí Quốc, Quận 12, TP.HCM', '0934567890', 5, N'CNQ12'),
-('Q12DS005', N'Hoàng Minh Duy', 'Nam', N'Số 50, Đường Thạnh Lộc, Quận 12, TP.HCM', '0945678901', 3, N'CNQ12');
+('CNQ12DS001', N'Nguyễn Thị Kim Lan', 'Nữ', N'Số 15, Đường Nguyễn Văn Cừ, Quận 12, TP.HCM', '0901234567', 1, N'CNQ12'),
+('CNQ12DS002', N'Lê Văn Cường', 'Nam', N'Số 20, Đường Lê Văn Lương, Quận 12, TP.HCM', '0912345678', 2, N'CNQ12'),
+('CNQ12DS003', N'Phan Thiên Hương', 'Nữ', N'Số 30, Đường Trường Chinh, Quận 12, TP.HCM', '0923456789', 4, N'CNQ12'),
+('CNQ12DS004', N'Vũ Tiến Duy', 'Nam', N'Số 40, Đường Ngô Chí Quốc, Quận 12, TP.HCM', '0934567890', 5, N'CNQ12'),
+('CNQ12DS005', N'Hoàng Minh Duy', 'Nam', N'Số 50, Đường Thạnh Lộc, Quận 12, TP.HCM', '0945678901', 3, N'CNQ12');
 
 -- Thêm dữ liệu khách hàng
 -- Dữ liệu chi nhánh Quận 1
@@ -428,6 +425,7 @@ INSERT INTO KhachHang (maKhachHang, tenKhachHang, gioiTinh, ngaySinh, soDienThoa
 -- Thêm dữ liệu thông tin số lượng
 -- Dữ liệu chi nhánh Quận 1
 INSERT INTO SoLuongThuocChiNhanh (maChiNhanh, maThuoc, soLuong)
+VALUES
 ('CNQ1', 'T001', 45),
 ('CNQ1', 'T002', 36),
 ('CNQ1', 'T003', 80),
@@ -461,6 +459,7 @@ INSERT INTO SoLuongThuocChiNhanh (maChiNhanh, maThuoc, soLuong)
 
 -- Dữ liệu chi nhánh Quận 3
 INSERT INTO SoLuongThuocChiNhanh (maChiNhanh, maThuoc, soLuong)
+VALUES
 ('CNQ3', 'T001', 29),
 ('CNQ3', 'T002', 58),
 ('CNQ3', 'T003', 4),
@@ -494,6 +493,7 @@ INSERT INTO SoLuongThuocChiNhanh (maChiNhanh, maThuoc, soLuong)
 
 -- Dữ liệu chi nhánh Quận 5
 INSERT INTO SoLuongThuocChiNhanh (maChiNhanh, maThuoc, soLuong)
+VALUES
 ('CNQ5', 'T001', 6),
 ('CNQ5', 'T002', 7),
 ('CNQ5', 'T003', 51),
@@ -527,6 +527,7 @@ INSERT INTO SoLuongThuocChiNhanh (maChiNhanh, maThuoc, soLuong)
 
 -- Dữ liệu chi nhánh Quận 10
 INSERT INTO SoLuongThuocChiNhanh (maChiNhanh, maThuoc, soLuong)
+VALUES
 ('CNQ10', 'T001', 16),
 ('CNQ10', 'T002', 57),
 ('CNQ10', 'T003', 41),
@@ -556,10 +557,11 @@ INSERT INTO SoLuongThuocChiNhanh (maChiNhanh, maThuoc, soLuong)
 ('CNQ10', 'T027', 63),
 ('CNQ10', 'T028', 80),
 ('CNQ10', 'T029', 91),
-('CNQ10', 'T030', 38)
+('CNQ10', 'T030', 38);
 
 -- Dữ liệu chi nhánh Quận 12
 INSERT INTO SoLuongThuocChiNhanh (maChiNhanh, maThuoc, soLuong)
+VALUES
 ('CNQ12', 'T001', 72),
 ('CNQ12', 'T002', 48),
 ('CNQ12', 'T003', 64),
@@ -589,11 +591,12 @@ INSERT INTO SoLuongThuocChiNhanh (maChiNhanh, maThuoc, soLuong)
 ('CNQ12', 'T027', 37),
 ('CNQ12', 'T028', 58),
 ('CNQ12', 'T029', 49),
-('CNQ12', 'T030', 92)
+('CNQ12', 'T030', 92);
 
 -- Thêm dữ liệu thông tin hoá đơn nhập
 -- Dữ liệu chi nhánh Quận 1
-INSERT INTO HoaDonNhapThuoc (maHoaDon, ngayLap, soLuongThuoc, maThuoc, maNhanVien) VALUES
+INSERT INTO HoaDonNhapThuoc (maHoaDon, ngayLap, soLuongThuoc, maThuoc, maNhanVien) 
+VALUES
 ('Q1HDN001', '2025-01-01', 45, 'T001', 'Q1NV001'),
 ('Q1HDN002', '2025-01-02', 50, 'T002', 'Q1NV001'),
 ('Q1HDN003', '2025-01-03', 37, 'T003', 'Q1NV001'),
@@ -626,7 +629,8 @@ INSERT INTO HoaDonNhapThuoc (maHoaDon, ngayLap, soLuongThuoc, maThuoc, maNhanVie
 ('Q1HDN030', '2025-01-30', 57, 'T030', 'Q1NV001');
 
 -- Dữ liệu chi nhánh Quận 3
-INSERT INTO HoaDonNhapThuoc (maHoaDon, ngayLap, soLuongThuoc, maThuoc, maNhanVien) VALUES
+INSERT INTO HoaDonNhapThuoc (maHoaDon, ngayLap, soLuongThuoc, maThuoc, maNhanVien) 
+VALUES
 ('Q3HDN001', '2025-04-02', 52, 'T001', 'Q3NV001'),
 ('Q3HDN002', '2025-04-03', 40, 'T002', 'Q3NV001'),
 ('Q3HDN003', '2025-04-04', 63, 'T003', 'Q3NV001'),
@@ -659,7 +663,8 @@ INSERT INTO HoaDonNhapThuoc (maHoaDon, ngayLap, soLuongThuoc, maThuoc, maNhanVie
 ('Q3HDN030', '2025-05-01', 50, 'T030', 'Q3NV001');
 
 -- Dữ liệu chi nhánh Quận 5
-INSERT INTO HoaDonNhapThuoc (maHoaDon, ngayLap, soLuongThuoc, maThuoc, maNhanVien) VALUES
+INSERT INTO HoaDonNhapThuoc (maHoaDon, ngayLap, soLuongThuoc, maThuoc, maNhanVien) 
+VALUES
 ('Q5HDN001', '2025-05-02', 38, 'T001', 'Q5NV001'),
 ('Q5HDN002', '2025-05-03', 55, 'T002', 'Q5NV001'),
 ('Q5HDN003', '2025-05-04', 43, 'T003', 'Q5NV001'),
@@ -692,7 +697,8 @@ INSERT INTO HoaDonNhapThuoc (maHoaDon, ngayLap, soLuongThuoc, maThuoc, maNhanVie
 ('Q5HDN030', '2025-05-31', 51, 'T030', 'Q5NV001');
 
 -- Dữ liệu chi nhánh Quận 7
-INSERT INTO HoaDonNhapThuoc (maHoaDon, ngayLap, soLuongThuoc, maThuoc, maNhanVien) VALUES
+INSERT INTO HoaDonNhapThuoc (maHoaDon, ngayLap, soLuongThuoc, maThuoc, maNhanVien) 
+VALUES
 ('Q7HDN001', '2025-08-01', 56, 'T001', 'Q7NV001'),
 ('Q7HDN002', '2025-08-02', 39, 'T002', 'Q7NV001'),
 ('Q7HDN003', '2025-08-03', 47, 'T003', 'Q7NV001'),
@@ -725,7 +731,8 @@ INSERT INTO HoaDonNhapThuoc (maHoaDon, ngayLap, soLuongThuoc, maThuoc, maNhanVie
 ('Q7HDN030', '2025-08-30', 46, 'T030', 'Q7NV001');
 
 -- Dữ liệu chi nhánh Quận 10
-INSERT INTO HoaDonNhapThuoc (maHoaDon, ngayLap, soLuongThuoc, maThuoc, maNhanVien) VALUES
+INSERT INTO HoaDonNhapThuoc (maHoaDon, ngayLap, soLuongThuoc, maThuoc, maNhanVien) 
+VALUES
 ('Q10HDN001', '2025-02-01', 61, 'T001', 'Q10NV001'),
 ('Q10HDN002', '2025-02-02', 48, 'T002', 'Q10NV001'),
 ('Q10HDN003', '2025-02-03', 57, 'T003', 'Q10NV001'),
@@ -758,7 +765,8 @@ INSERT INTO HoaDonNhapThuoc (maHoaDon, ngayLap, soLuongThuoc, maThuoc, maNhanVie
 ('Q10HDN030', '2025-03-02', 63, 'T030', 'Q10NV001');
 
 -- Dữ liệu chi nhánh Quận 12
-INSERT INTO HoaDonNhapThuoc (maHoaDon, ngayLap, soLuongThuoc, maThuoc, maNhanVien) VALUES
+INSERT INTO HoaDonNhapThuoc (maHoaDon, ngayLap, soLuongThuoc, maThuoc, maNhanVien) 
+VALUES
 ('Q12HDN001', '2025-03-03', 46, 'T001', 'Q12NV001'),
 ('Q12HDN002', '2025-03-04', 60, 'T002', 'Q12NV001'),
 ('Q12HDN003', '2025-03-05', 43, 'T003', 'Q12NV001'),
@@ -792,7 +800,6 @@ INSERT INTO HoaDonNhapThuoc (maHoaDon, ngayLap, soLuongThuoc, maThuoc, maNhanVie
 
 -- Thêm dữ liệu thông tin hoá đơn bán
 -- Dữ liệu chi nhánh Quận 1
-INSERT INTO HoaDonBanThuoc (maHoaDon, soLuongThuoc, ngayLap, maKhachHang, maThuoc, maDuocSi) VALUES
 INSERT INTO HoaDonBanThuoc (maHoaDon, soLuongThuoc, ngayLap, maKhachHang, maThuoc, maDuocSi) VALUES
 ('Q1HDB001', 2, '2023-01-01', 'Q1KH0001', 'T001', 'CNQ1DS001'),
 ('Q1HDB002', 4, '2023-01-02', 'Q1KH0002', 'T002', 'CNQ1DS002'),
@@ -927,71 +934,71 @@ INSERT INTO HoaDonBanThuoc (maHoaDon, soLuongThuoc, ngayLap, maKhachHang, maThuo
 
 -- Dữ liệu chi nhánh Quận 10
 INSERT INTO HoaDonBanThuoc (maHoaDon, soLuongThuoc, ngayLap, maKhachHang, maThuoc, maDuocSi) VALUES
-('Q10HDB001', 2, '2023-01-01', 'Q10KH001', 'T001', 'CNQ10DS001'),
-('Q10HDB002', 4, '2023-01-02', 'Q10KH002', 'T002', 'CNQ10DS002'),
-('Q10HDB003', 3, '2023-01-03', 'Q10KH003', 'T003', 'CNQ10DS003'),
-('Q10HDB004', 1, '2023-01-04', 'Q10KH004', 'T004', 'CNQ10DS004'),
-('Q10HDB005', 5, '2023-01-05', 'Q10KH005', 'T005', 'CNQ10DS005'),
-('Q10HDB006', 2, '2023-01-06', 'Q10KH006', 'T006', 'CNQ10DS001'),
-('Q10HDB007', 3, '2023-01-07', 'Q10KH007', 'T007', 'CNQ10DS002'),
-('Q10HDB008', 4, '2023-01-08', 'Q10KH008', 'T008', 'CNQ10DS003'),
-('Q10HDB009', 2, '2023-01-09', 'Q10KH009', 'T009', 'CNQ10DS004'),
-('Q10HDB010', 1, '2023-01-10', 'Q10KH010', 'T010', 'CNQ10DS005'),
-('Q10HDB011', 5, '2023-01-11', 'Q10KH011', 'T011', 'CNQ10DS001'),
-('Q10HDB012', 3, '2023-01-12', 'Q10KH012', 'T012', 'CNQ10DS002'),
-('Q10HDB013', 4, '2023-01-13', 'Q10KH013', 'T013', 'CNQ10DS003'),
-('Q10HDB014', 2, '2023-01-14', 'Q10KH014', 'T014', 'CNQ10DS004'),
-('Q10HDB015', 3, '2023-01-15', 'Q10KH015', 'T015', 'CNQ10DS005'),
-('Q10HDB016', 1, '2023-01-16', 'Q10KH016', 'T016', 'CNQ10DS001'),
-('Q10HDB017', 4, '2023-01-17', 'Q10KH017', 'T017', 'CNQ10DS002'),
-('Q10HDB018', 2, '2023-01-18', 'Q10KH018', 'T018', 'CNQ10DS003'),
-('Q10HDB019', 3, '2023-01-19', 'Q10KH019', 'T019', 'CNQ10DS004'),
-('Q10HDB020', 5, '2023-01-20', 'Q10KH020', 'T020', 'CNQ10DS005'),
-('Q10HDB021', 2, '2023-01-21', 'Q10KH021', 'T021', 'CNQ10DS001'),
-('Q10HDB022', 3, '2023-01-22', 'Q10KH022', 'T022', 'CNQ10DS002'),
-('Q10HDB023', 4, '2023-01-23', 'Q10KH023', 'T023', 'CNQ10DS003'),
-('Q10HDB024', 1, '2023-01-24', 'Q10KH024', 'T024', 'CNQ10DS004'),
-('Q10HDB025', 5, '2023-01-25', 'Q10KH025', 'T025', 'CNQ10DS005'),
-('Q10HDB026', 2, '2023-01-26', 'Q10KH001', 'T026', 'CNQ10DS001'),
-('Q10HDB027', 4, '2023-01-27', 'Q10KH002', 'T027', 'CNQ10DS002'),
-('Q10HDB028', 3, '2023-01-28', 'Q10KH003', 'T028', 'CNQ10DS003'),
-('Q10HDB029', 2, '2023-01-29', 'Q10KH004', 'T029', 'CNQ10DS004'),
-('Q10HDB030', 1, '2023-01-30', 'Q10KH005', 'T030', 'CNQ10DS005');
+('Q10HDB001', 2, '2023-01-01', 'Q10KH0001', 'T001', 'CNQ10DS001'),
+('Q10HDB002', 4, '2023-01-02', 'Q10KH0002', 'T002', 'CNQ10DS002'),
+('Q10HDB003', 3, '2023-01-03', 'Q10KH0003', 'T003', 'CNQ10DS003'),
+('Q10HDB004', 1, '2023-01-04', 'Q10KH0004', 'T004', 'CNQ10DS004'),
+('Q10HDB005', 5, '2023-01-05', 'Q10KH0005', 'T005', 'CNQ10DS005'),
+('Q10HDB006', 2, '2023-01-06', 'Q10KH0006', 'T006', 'CNQ10DS001'),
+('Q10HDB007', 3, '2023-01-07', 'Q10KH0007', 'T007', 'CNQ10DS002'),
+('Q10HDB008', 4, '2023-01-08', 'Q10KH0008', 'T008', 'CNQ10DS003'),
+('Q10HDB009', 2, '2023-01-09', 'Q10KH0009', 'T009', 'CNQ10DS004'),
+('Q10HDB010', 1, '2023-01-10', 'Q10KH0010', 'T010', 'CNQ10DS005'),
+('Q10HDB011', 5, '2023-01-11', 'Q10KH0011', 'T011', 'CNQ10DS001'),
+('Q10HDB012', 3, '2023-01-12', 'Q10KH0012', 'T012', 'CNQ10DS002'),
+('Q10HDB013', 4, '2023-01-13', 'Q10KH0013', 'T013', 'CNQ10DS003'),
+('Q10HDB014', 2, '2023-01-14', 'Q10KH0014', 'T014', 'CNQ10DS004'),
+('Q10HDB015', 3, '2023-01-15', 'Q10KH0015', 'T015', 'CNQ10DS005'),
+('Q10HDB016', 1, '2023-01-16', 'Q10KH0016', 'T016', 'CNQ10DS001'),
+('Q10HDB017', 4, '2023-01-17', 'Q10KH0017', 'T017', 'CNQ10DS002'),
+('Q10HDB018', 2, '2023-01-18', 'Q10KH0018', 'T018', 'CNQ10DS003'),
+('Q10HDB019', 3, '2023-01-19', 'Q10KH0019', 'T019', 'CNQ10DS004'),
+('Q10HDB020', 5, '2023-01-20', 'Q10KH0020', 'T020', 'CNQ10DS005'),
+('Q10HDB021', 2, '2023-01-21', 'Q10KH0021', 'T021', 'CNQ10DS001'),
+('Q10HDB022', 3, '2023-01-22', 'Q10KH0022', 'T022', 'CNQ10DS002'),
+('Q10HDB023', 4, '2023-01-23', 'Q10KH0023', 'T023', 'CNQ10DS003'),
+('Q10HDB024', 1, '2023-01-24', 'Q10KH0024', 'T024', 'CNQ10DS004'),
+('Q10HDB025', 5, '2023-01-25', 'Q10KH0025', 'T025', 'CNQ10DS005'),
+('Q10HDB026', 2, '2023-01-26', 'Q10KH0001', 'T026', 'CNQ10DS001'),
+('Q10HDB027', 4, '2023-01-27', 'Q10KH0002', 'T027', 'CNQ10DS002'),
+('Q10HDB028', 3, '2023-01-28', 'Q10KH0003', 'T028', 'CNQ10DS003'),
+('Q10HDB029', 2, '2023-01-29', 'Q10KH0004', 'T029', 'CNQ10DS004'),
+('Q10HDB030', 1, '2023-01-30', 'Q10KH0005', 'T030', 'CNQ10DS005');
 
 -- Dữ liệu chi nhánh Quận 12
 INSERT INTO HoaDonBanThuoc (maHoaDon, soLuongThuoc, ngayLap, maKhachHang, maThuoc, maDuocSi) VALUES
-('Q12HDB001', 2, '2023-01-01', 'Q12KH001', 'T001', 'CNQ12DS001'),
-('Q12HDB002', 4, '2023-01-02', 'Q12KH002', 'T002', 'CNQ12DS002'),
-('Q12HDB003', 3, '2023-01-03', 'Q12KH003', 'T003', 'CNQ12DS003'),
-('Q12HDB004', 1, '2023-01-04', 'Q12KH004', 'T004', 'CNQ12DS004'),
-('Q12HDB005', 5, '2023-01-05', 'Q12KH005', 'T005', 'CNQ12DS005'),
-('Q12HDB006', 2, '2023-01-06', 'Q12KH006', 'T006', 'CNQ12DS001'),
-('Q12HDB007', 3, '2023-01-07', 'Q12KH007', 'T007', 'CNQ12DS002'),
-('Q12HDB008', 4, '2023-01-08', 'Q12KH008', 'T008', 'CNQ12DS003'),
-('Q12HDB009', 2, '2023-01-09', 'Q12KH009', 'T009', 'CNQ12DS004'),
-('Q12HDB010', 1, '2023-01-10', 'Q12KH010', 'T010', 'CNQ12DS005'),
-('Q12HDB011', 5, '2023-01-11', 'Q12KH011', 'T011', 'CNQ12DS001'),
-('Q12HDB012', 3, '2023-01-12', 'Q12KH012', 'T012', 'CNQ12DS002'),
-('Q12HDB013', 4, '2023-01-13', 'Q12KH013', 'T013', 'CNQ12DS003'),
-('Q12HDB014', 2, '2023-01-14', 'Q12KH014', 'T014', 'CNQ12DS004'),
-('Q12HDB015', 3, '2023-01-15', 'Q12KH015', 'T015', 'CNQ12DS005'),
-('Q12HDB016', 1, '2023-01-16', 'Q12KH016', 'T016', 'CNQ12DS001'),
-('Q12HDB017', 4, '2023-01-17', 'Q12KH017', 'T017', 'CNQ12DS002'),
-('Q12HDB018', 2, '2023-01-18', 'Q12KH018', 'T018', 'CNQ12DS003'),
-('Q12HDB019', 3, '2023-01-19', 'Q12KH019', 'T019', 'CNQ12DS004'),
-('Q12HDB020', 5, '2023-01-20', 'Q12KH020', 'T020', 'CNQ12DS005'),
-('Q12HDB021', 2, '2023-01-21', 'Q12KH021', 'T021', 'CNQ12DS001'),
-('Q12HDB022', 3, '2023-01-22', 'Q12KH022', 'T022', 'CNQ12DS002'),
-('Q12HDB023', 4, '2023-01-23', 'Q12KH023', 'T023', 'CNQ12DS003'),
-('Q12HDB024', 1, '2023-01-24', 'Q12KH024', 'T024', 'CNQ12DS004'),
-('Q12HDB025', 5, '2023-01-25', 'Q12KH025', 'T025', 'CNQ12DS005'),
-('Q12HDB026', 2, '2023-01-26', 'Q12KH026', 'T026', 'CNQ12DS001'),
-('Q12HDB027', 4, '2023-01-27', 'Q12KH027', 'T027', 'CNQ12DS002'),
-('Q12HDB028', 3, '2023-01-28', 'Q12KH028', 'T028', 'CNQ12DS003'),
-('Q12HDB029', 2, '2023-01-29', 'Q12KH029', 'T029', 'CNQ12DS004'),
-('Q12HDB030', 1, '2023-01-30', 'Q12KH030', 'T030', 'CNQ12DS005'),
-('Q12HDB031', 4, '2023-01-31', 'Q12KH031', 'T001', 'CNQ12DS001'),
-('Q12HDB032', 3, '2023-02-01', 'Q12KH032', 'T002', 'CNQ12DS002'),
-('Q12HDB033', 2, '2023-02-02', 'Q12KH033', 'T003', 'CNQ12DS003'),
-('Q12HDB034', 5, '2023-02-03', 'Q12KH034', 'T004', 'CNQ12DS004');
+('Q12HDB001', 2, '2023-01-01', 'Q12KH0001', 'T001', 'CNQ12DS001'),
+('Q12HDB002', 4, '2023-01-02', 'Q12KH0002', 'T002', 'CNQ12DS002'),
+('Q12HDB003', 3, '2023-01-03', 'Q12KH0003', 'T003', 'CNQ12DS003'),
+('Q12HDB004', 1, '2023-01-04', 'Q12KH0004', 'T004', 'CNQ12DS004'),
+('Q12HDB005', 5, '2023-01-05', 'Q12KH0005', 'T005', 'CNQ12DS005'),
+('Q12HDB006', 2, '2023-01-06', 'Q12KH0006', 'T006', 'CNQ12DS001'),
+('Q12HDB007', 3, '2023-01-07', 'Q12KH0007', 'T007', 'CNQ12DS002'),
+('Q12HDB008', 4, '2023-01-08', 'Q12KH0008', 'T008', 'CNQ12DS003'),
+('Q12HDB009', 2, '2023-01-09', 'Q12KH0009', 'T009', 'CNQ12DS004'),
+('Q12HDB010', 1, '2023-01-10', 'Q12KH0010', 'T010', 'CNQ12DS005'),
+('Q12HDB011', 5, '2023-01-11', 'Q12KH0011', 'T011', 'CNQ12DS001'),
+('Q12HDB012', 3, '2023-01-12', 'Q12KH0012', 'T012', 'CNQ12DS002'),
+('Q12HDB013', 4, '2023-01-13', 'Q12KH0013', 'T013', 'CNQ12DS003'),
+('Q12HDB014', 2, '2023-01-14', 'Q12KH0014', 'T014', 'CNQ12DS004'),
+('Q12HDB015', 3, '2023-01-15', 'Q12KH0015', 'T015', 'CNQ12DS005'),
+('Q12HDB016', 1, '2023-01-16', 'Q12KH0016', 'T016', 'CNQ12DS001'),
+('Q12HDB017', 4, '2023-01-17', 'Q12KH0017', 'T017', 'CNQ12DS002'),
+('Q12HDB018', 2, '2023-01-18', 'Q12KH0018', 'T018', 'CNQ12DS003'),
+('Q12HDB019', 3, '2023-01-19', 'Q12KH0019', 'T019', 'CNQ12DS004'),
+('Q12HDB020', 5, '2023-01-20', 'Q12KH0020', 'T020', 'CNQ12DS005'),
+('Q12HDB021', 2, '2023-01-21', 'Q12KH0021', 'T021', 'CNQ12DS001'),
+('Q12HDB022', 3, '2023-01-22', 'Q12KH0022', 'T022', 'CNQ12DS002'),
+('Q12HDB023', 4, '2023-01-23', 'Q12KH0023', 'T023', 'CNQ12DS003'),
+('Q12HDB024', 1, '2023-01-24', 'Q12KH0024', 'T024', 'CNQ12DS004'),
+('Q12HDB025', 5, '2023-01-25', 'Q12KH0025', 'T025', 'CNQ12DS005'),
+('Q12HDB026', 2, '2023-01-26', 'Q12KH0026', 'T026', 'CNQ12DS001'),
+('Q12HDB027', 4, '2023-01-27', 'Q12KH0027', 'T027', 'CNQ12DS002'),
+('Q12HDB028', 3, '2023-01-28', 'Q12KH0028', 'T028', 'CNQ12DS003'),
+('Q12HDB029', 2, '2023-01-29', 'Q12KH0029', 'T029', 'CNQ12DS004'),
+('Q12HDB030', 1, '2023-01-30', 'Q12KH0030', 'T030', 'CNQ12DS005'),
+('Q12HDB031', 4, '2023-01-31', 'Q12KH0031', 'T001', 'CNQ12DS001'),
+('Q12HDB032', 3, '2023-02-01', 'Q12KH0032', 'T002', 'CNQ12DS002'),
+('Q12HDB033', 2, '2023-02-02', 'Q12KH0033', 'T003', 'CNQ12DS003'),
+('Q12HDB034', 5, '2023-02-03', 'Q12KH0034', 'T004', 'CNQ12DS004');
 

@@ -202,52 +202,53 @@ VALUES
 
 -- Thêm dữ liệu dược sĩ 
 -- Dữ liệu chi nhánh Quận 1
+-- Dữ liệu chi nhánh Quận 1
 INSERT INTO DuocSi (maDuocSi, tenDuocSi, gioiTinh, diaChi, soDienThoai, capBac, maChiNhanh) VALUES
-('CNQ1DS001', N'Nguyễn Minh Tuấn', 'Nam', N'Số 1, Đường Lê Thị Hồng Gấm, Quận 1, TP.HCM', '0909123456', 1, 'CNQ1'),
-('CNQ1DS002', N'Lê Thiên Hương', 'Nữ', N'Số 2, Đường Nguyễn Huệ, Quận 1, TP.HCM', '0912234567', 2, 'CNQ1'),
-('CNQ1DS003', N'Vũ Thị Mỹ Linh', 'Nữ', N'Số 3, Đường Phạm Ngọc Thạch, Quận 1, TP.HCM', '0907345678', 3, 'CNQ1'),
-('CNQ1DS004', N'Phan Hải Đăng', 'Nam', N'Số 4, Đường Đồng Khởi, Quận 1, TP.HCM', '0918345679', 5, 'CNQ1'),
-('CNQ1DS005', N'Nguyễn Thị Lan Anh', 'Nữ', N'Số 5, Đường Pasteur, Quận 1, TP.HCM', '0921122334', 4, 'CNQ1');
+(N'CNQ1DS001', N'Nguyễn Minh Tuấn', N'Nam', N'Số 1, Đường Lê Thị Hồng Gấm, Quận 1, TP.HCM', '0909123456', 1, N'CNQ1'),
+(N'CNQ1DS002', N'Lê Thiên Hương', N'Nữ', N'Số 2, Đường Nguyễn Huệ, Quận 1, TP.HCM', '0912234567', 2, N'CNQ1'),
+(N'CNQ1DS003', N'Vũ Thị Mỹ Linh', N'Nữ', N'Số 3, Đường Phạm Ngọc Thạch, Quận 1, TP.HCM', '0907345678', 3, N'CNQ1'),
+(N'CNQ1DS004', N'Phan Hải Đăng', N'Nam', N'Số 4, Đường Đồng Khởi, Quận 1, TP.HCM', '0918345679', 5, N'CNQ1'),
+(N'CNQ1DS005', N'Nguyễn Thị Lan Anh', N'Nữ', N'Số 5, Đường Pasteur, Quận 1, TP.HCM', '0921122334', 4, N'CNQ1');
 
 -- Dữ liệu chi nhánh Quận 3
 INSERT INTO DuocSi (maDuocSi, tenDuocSi, gioiTinh, diaChi, soDienThoai, capBac, maChiNhanh) VALUES
-('CNQ3DS001', N'Nguyễn Hoàng Nam', 'Nam', N'Số 10, Đường Trường Sa, Quận 3, TP.HCM', '0932323456', 1, 'CNQ3'),
-('CNQ3DS002', N'Phan Hoàng Yến', 'Nữ', N'Số 20, Đường Cao Thắng, Quận 3, TP.HCM', '0909234567', 2, 'CNQ3'),
-('CNQ3DS003', N'Lê Minh Khánh', 'Nam', N'Số 15, Đường Nguyễn Thông, Quận 3, TP.HCM', '0917345678', 3, 'CNQ3'),
-('CNQ3DS004', N'Vũ Thanh Bình', 'Nam', N'Số 25, Đường Võ Thị Sáu, Quận 3, TP.HCM', '0923456789', 5, 'CNQ3'),
-('CNQ3DS005', N'Hoàng Thị Thuý', 'Nữ', N'Số 30, Đường Cách Mạng Tháng 8, Quận 3, TP.HCM', '0934567890', 4, 'CNQ3');
+(N'CNQ3DS001', N'Nguyễn Hoàng Nam', N'Nam', N'Số 10, Đường Trường Sa, Quận 3, TP.HCM', '0932323456', 1, N'CNQ3'),
+(N'CNQ3DS002', N'Phan Hoàng Yến', N'Nữ', N'Số 20, Đường Cao Thắng, Quận 3, TP.HCM', '0909234567', 2, N'CNQ3'),
+(N'CNQ3DS003', N'Lê Minh Khánh', N'Nam', N'Số 15, Đường Nguyễn Thông, Quận 3, TP.HCM', '0917345678', 3, N'CNQ3'),
+(N'CNQ3DS004', N'Vũ Thanh Bình', N'Nam', N'Số 25, Đường Võ Thị Sáu, Quận 3, TP.HCM', '0923456789', 5, N'CNQ3'),
+(N'CNQ3DS005', N'Hoàng Thị Thuý', N'Nữ', N'Số 30, Đường Cách Mạng Tháng 8, Quận 3, TP.HCM', '0934567890', 4, N'CNQ3');
 
 -- Dữ liệu chi nhánh Quận 5
 INSERT INTO DuocSi (maDuocSi, tenDuocSi, gioiTinh, diaChi, soDienThoai, capBac, maChiNhanh) VALUES
-('CNQ5DS001', N'Nguyễn Quốc Tuấn', 'Nam', N'Số 40, Đường Trần Hưng Đạo, Quận 5, TP.HCM', '0945123456', 1, 'CNQ5'),
-('CNQ5DS002', N'Lê Thị Hải Yến', 'Nữ', N'Số 50, Đường Nguyễn Trãi, Quận 5, TP.HCM', '0906324567', 2, 'CNQ5'),
-('CNQ5DS003', N'Vũ Tuấn Anh', 'Nam', N'Số 55, Đường Lý Thường Kiệt, Quận 5, TP.HCM', '0912123456', 4, 'CNQ5'),
-('CNQ5DS004', N'Phan Minh Hoàng', 'Nam', N'Số 60, Đường Nguyễn Thị Nhỏ, Quận 5, TP.HCM', '0923456789', 5, 'CNQ5'),
-('CNQ5DS005', N'Hoàng Thi Thanh', 'Nữ', N'Số 65, Đường Hùng Vương, Quận 5, TP.HCM', '0901234567', 3, 'CNQ5');
+(N'CNQ5DS001', N'Nguyễn Quốc Tuấn', N'Nam', N'Số 40, Đường Trần Hưng Đạo, Quận 5, TP.HCM', '0945123456', 1, N'CNQ5'),
+(N'CNQ5DS002', N'Lê Thị Hải Yến', N'Nữ', N'Số 50, Đường Nguyễn Trãi, Quận 5, TP.HCM', '0906324567', 2, N'CNQ5'),
+(N'CNQ5DS003', N'Vũ Tuấn Anh', N'Nam', N'Số 55, Đường Lý Thường Kiệt, Quận 5, TP.HCM', '0912123456', 4, N'CNQ5'),
+(N'CNQ5DS004', N'Phan Minh Hoàng', N'Nam', N'Số 60, Đường Nguyễn Thị Nhỏ, Quận 5, TP.HCM', '0923456789', 5, N'CNQ5'),
+(N'CNQ5DS005', N'Hoàng Thi Thanh', N'Nữ', N'Số 65, Đường Hùng Vương, Quận 5, TP.HCM', '0901234567', 3, N'CNQ5');
 
 -- Dữ liệu chi nhánh Quận 7
 INSERT INTO DuocSi (maDuocSi, tenDuocSi, gioiTinh, diaChi, soDienThoai, capBac, maChiNhanh) VALUES
-('CNQ7DS001', N'Nguyễn Quốc Hưng', 'Nam', N'Số 70, Đường Nguyễn Thị Thập, Quận 7, TP.HCM', '0912345678', 1, 'CNQ7'),
-('CNQ7DS002', N'Lê Thi Hồng', 'Nữ', N'Số 80, Đường Phạm Hữu Lầu, Quận 7, TP.HCM', '0923345678', 2, 'CNQ7'),
-('CNQ7DS003', N'Vũ Tuấn Kiệt', 'Nam', N'Số 90, Đường Lê Văn Lương, Quận 7, TP.HCM', '0912345679', 4, 'CNQ7'),
-('CNQ7DS004', N'Phan Thi Ngọc', 'Nữ', N'Số 100, Đường Nguyễn Thị Thập, Quận 7, TP.HCM', '0923456780', 5, 'CNQ7'),
-('CNQ7DS005', N'Hoàng Hữu Quân', 'Nam', N'Số 110, Đường Nguyễn Lương Bằng, Quận 7, TP.HCM', '0934567891', 3, 'CNQ7');
+(N'CNQ7DS001', N'Nguyễn Quốc Hưng', N'Nam', N'Số 70, Đường Nguyễn Thị Thập, Quận 7, TP.HCM', '0912345678', 1, N'CNQ7'),
+(N'CNQ7DS002', N'Lê Thi Hồng', N'Nữ', N'Số 80, Đường Phạm Hữu Lầu, Quận 7, TP.HCM', '0923345678', 2, N'CNQ7'),
+(N'CNQ7DS003', N'Vũ Tuấn Kiệt', N'Nam', N'Số 90, Đường Lê Văn Lương, Quận 7, TP.HCM', '0912345679', 4, N'CNQ7'),
+(N'CNQ7DS004', N'Phan Thi Ngọc', N'Nữ', N'Số 100, Đường Nguyễn Thị Thập, Quận 7, TP.HCM', '0923456780', 5, N'CNQ7'),
+(N'CNQ7DS005', N'Hoàng Hữu Quân', N'Nam', N'Số 110, Đường Nguyễn Lương Bằng, Quận 7, TP.HCM', '0934567891', 3, N'CNQ7');
 
 -- Dữ liệu chi nhánh Quận 10
 INSERT INTO DuocSi (maDuocSi, tenDuocSi, gioiTinh, diaChi, soDienThoai, capBac, maChiNhanh) VALUES
-('CNQ10DS001', N'Nguyễn Văn Linh', 'Nam', N'Số 120, Đường Sư Vạn Hạnh, Quận 10, TP.HCM', '0934567890', 1, 'CNQ10'),
-('CNQ10DS002', N'Lê Thanh Tâm', 'Nữ', N'Số 130, Đường Lý Thường Kiệt, Quận 10, TP.HCM', '0923456780', 2, 'CNQ10'),
-('CNQ10DS003', N'Vũ Thị Lan', 'Nữ', N'Số 140, Đường Cách Mạng Tháng 8, Quận 10, TP.HCM', '0901234568', 4, 'CNQ10'),
-('CNQ10DS004', N'Phan Minh Đức', 'Nam', N'Số 150, Đường Lê Hồng Phong, Quận 10, TP.HCM', '0912345679', 5, 'CNQ10'),
-('CNQ10DS005', N'Hoàng Thanh Hoài', 'Nữ', N'Số 160, Đường 3 Tháng 2, Quận 10, TP.HCM', '0935678901', 3, 'CNQ10');
+(N'CNQ10DS001', N'Nguyễn Văn Linh', N'Nam', N'Số 120, Đường Sư Vạn Hạnh, Quận 10, TP.HCM', '0934567890', 1, N'CNQ10'),
+(N'CNQ10DS002', N'Lê Thanh Tâm', N'Nữ', N'Số 130, Đường Lý Thường Kiệt, Quận 10, TP.HCM', '0923456780', 2, N'CNQ10'),
+(N'CNQ10DS003', N'Vũ Thị Lan', N'Nữ', N'Số 140, Đường Cách Mạng Tháng 8, Quận 10, TP.HCM', '0901234568', 4, N'CNQ10'),
+(N'CNQ10DS004', N'Phan Minh Đức', N'Nam', N'Số 150, Đường Lê Hồng Phong, Quận 10, TP.HCM', '0912345679', 5, N'CNQ10'),
+(N'CNQ10DS005', N'Hoàng Thanh Hoài', N'Nữ', N'Số 160, Đường 3 Tháng 2, Quận 10, TP.HCM', '0935678901', 3, N'CNQ10');
 
 -- Dữ liệu chi nhánh Quận 12
 INSERT INTO DuocSi (maDuocSi, tenDuocSi, gioiTinh, diaChi, soDienThoai, capBac, maChiNhanh) VALUES
-('CNQ12DS001', N'Nguyễn Thị Kim Lan', 'Nữ', N'Số 15, Đường Nguyễn Văn Cừ, Quận 12, TP.HCM', '0901234567', 1, N'CNQ12'),
-('CNQ12DS002', N'Lê Văn Cường', 'Nam', N'Số 20, Đường Lê Văn Lương, Quận 12, TP.HCM', '0912345678', 2, N'CNQ12'),
-('CNQ12DS003', N'Phan Thiên Hương', 'Nữ', N'Số 30, Đường Trường Chinh, Quận 12, TP.HCM', '0923456789', 4, N'CNQ12'),
-('CNQ12DS004', N'Vũ Tiến Duy', 'Nam', N'Số 40, Đường Ngô Chí Quốc, Quận 12, TP.HCM', '0934567890', 5, N'CNQ12'),
-('CNQ12DS005', N'Hoàng Minh Duy', 'Nam', N'Số 50, Đường Thạnh Lộc, Quận 12, TP.HCM', '0945678901', 3, N'CNQ12');
+(N'CNQ12DS001', N'Nguyễn Thị Kim Lan', N'Nữ', N'Số 15, Đường Nguyễn Văn Cừ, Quận 12, TP.HCM', '0901234567', 1, N'CNQ12'),
+(N'CNQ12DS002', N'Lê Văn Cường', N'Nam', N'Số 20, Đường Lê Văn Lương, Quận 12, TP.HCM', '0912345678', 2, N'CNQ12'),
+(N'CNQ12DS003', N'Phan Thiên Hương', N'Nữ', N'Số 30, Đường Trường Chinh, Quận 12, TP.HCM', '0923456789', 4, N'CNQ12'),
+(N'CNQ12DS004', N'Vũ Tiến Duy', N'Nam', N'Số 40, Đường Ngô Chí Quốc, Quận 12, TP.HCM', '0934567890', 5, N'CNQ12'),
+(N'CNQ12DS005', N'Hoàng Minh Duy', N'Nam', N'Số 50, Đường Thạnh Lộc, Quận 12, TP.HCM', '0945678901', 3, N'CNQ12');
 
 -- Thêm dữ liệu khách hàng
 -- Dữ liệu chi nhánh Quận 1
